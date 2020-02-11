@@ -1,0 +1,67 @@
+Alumnos: 
+	- Víctor Manuel Cavero Gracia
+	- Jose Miguel 
+
+Entrega 1:
+	
+	Contenido textoplano1.txt = Hola
+				    Adios
+
+	Key = ba17cbd364049b55a388f865b34bc253
+
+	IV  = ed07335095f66001ed5758f509a8464b
+
+	Archivo codificado (ASCII) = rGtyH38XNMa8zbkZRNZZOw==
+
+Entrega 2:
+
+	Contenido textoplano1.txt = Hola
+				    Adios
+
+	Archivo codificado (ASCII) = U2FsdGVkX19BnDdtlxFLI4TzSqhEaBIzSdstcOFVi48=
+
+	Son distintos debido a que la SALT cambia, aunque la contraseña sea la misma. Se usan ambas para generar la Key.
+
+Entrega 3:
+
+	Contenido textoplano1.txt = Hola
+				    Adios
+
+	salt=F4F9CC4A86100BCD
+	key=BA82F7ACDC335603312A8094E343C16F
+	iv =686BDB436D1A0F4D2A716A9F0356D009
+
+	ej7ASCII.txt = U2FsdGVkX1/0+cxKhhALzUd0VjAmUFr69m6tganj+/Y=
+
+
+Entrega 4: (No se entrega IV)
+
+	Contenido textoplano1.txt = Hola
+				    Adios
+
+	salt=33382A8CB1868E11
+	key=CF510F6804E246F33A82683471A1DDFF
+
+	texto-rc4-2.txt = U2FsdGVkX18zOCqMsYaOERVqYWbMj45lHXd6
+
+	Se comprueba como texto-rc4-1.txt y texto-rc4-2.txt son distintos a causa de la SALT.
+
+
+Entrega 5:
+
+	SHA1(hosts)= 	60bd10c70c5e1e727ed1a76368f866bc74e4c709
+	SHA1(services)= 30ebfe0d89a7f1b42c86e6883c525b9beec58591
+
+Entrega 6: 
+
+	HMAC-SHA256(services)= b75727b05c27915922f4fd9fdc2cda4bb6d30025d7a3adde95abead5cbddcedc
+	HMAC-SHA512(services)= 4b1d1b5d821ef6152d3d2c95987593a5fe2d3a436d2dcf58a13d0653d4bbc457fd593387c7f883936ac1e39fa60c2dc5aed7d0a30fac9de81c3b0968d1c30bc2
+
+
+Entrega 7: (services no es muy grande, usar otro)
+
+Entrega 8:
+
+
+
+
