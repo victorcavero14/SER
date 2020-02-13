@@ -1,6 +1,6 @@
 Alumnos: 
 	- Víctor Manuel Cavero Gracia
-	- Jose Miguel 
+	- José Miguel Cabrera Llamas 
 
 Entrega 1:
 	
