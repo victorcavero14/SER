@@ -34,7 +34,7 @@ Entrega 3:
 	ej7ASCII.txt = U2FsdGVkX1/0+cxKhhALzUd0VjAmUFr69m6tganj+/Y=
 
 
-Entrega 4: (No se entrega IV)
+Entrega 4:
 
 	Contenido textoplano1.txt = Hola
 				    Adios
@@ -44,7 +44,7 @@ Entrega 4: (No se entrega IV)
 
 	texto-rc4-2.txt = U2FsdGVkX18zOCqMsYaOERVqYWbMj45lHXd6
 
-	Se comprueba como texto-rc4-1.txt y texto-rc4-2.txt son distintos a causa de la SALT.
+	Se comprueba como texto-rc4-1.txt y texto-rc4-2.txt son distintos a causa de la SALT que es aleatoria.
 
 
 Entrega 5:
@@ -58,9 +58,43 @@ Entrega 6:
 	HMAC-SHA512(services)= 4b1d1b5d821ef6152d3d2c95987593a5fe2d3a436d2dcf58a13d0653d4bbc457fd593387c7f883936ac1e39fa60c2dc5aed7d0a30fac9de81c3b0968d1c30bc2
 
 
-Entrega 7: (services no es muy grande, usar otro)
+Entrega 7:
+	
+	Hemos utilizado el archivo /etc/hosts ya que el /etc/services tiene un gran tamaño.
+	Contenido:
+
+		127.0.0.1	localhost
+		127.0.1.1	victorcavero14-HP-Pavilion-g6-Notebook-PC
+
+		# The following lines are desirable for IPv6 capable hosts
+		::1     ip6-localhost ip6-loopback
+		fe00::0 ip6-localnet
+		ff00::0 ip6-mcastprefix
+		ff02::1 ip6-allnodes
+		ff02::2 ip6-allrouters
+
+	Cifrado clave simétrica del archivo hosts:
+
+		-----BEGIN PGP MESSAGE-----
+
+	jA0ECQMCiidlguTy6Vr10sArAf/za1kDnAmCagO85DD1nORVKzMmLekArU5iS7ys
+	5Dt3IKPwB7VhdDAm6ch8GZyX2CkqPi5KOn1LrCFQHBC628CU8oCo7Ajrt5J6MXYa
+	LI86l8iLcWIOxWrpNR9AQ9mwoGXSMZIMepHJXyv+x2viOXo2v4ZTAyeBc7qsL4Ri
+	X/L7wPgWw0qDbWw67q/cpT1EgeSWRbirKILlKH17re4g/Q7JhNv+WIeR9mCg9gPV
+	gUZIRe1XtcwMMParF/tH9d1H46k/0KT2Me7HShhr9q1t4WO9fWzj4G5n18kU+yZO
+	6xULgOh/zYqfj/Kz5w==
+	=O7ee
+		-----END PGP MESSAGE-----
+
 
 Entrega 8:
+
+	Codificación sha1:
+		services: 30EB FE0D 89A7 F1B4 2C86  E688 3C52 5B9B EEC5 8591
+	
+	Codificación sha256:
+		services: 75D36DFA 5C3F829D 23F64750 D6451641 963C5A1E 0C6E5D85 FB835257 55B1450C
+
 
 
 
