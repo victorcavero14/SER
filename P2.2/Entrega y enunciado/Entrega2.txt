@@ -4,77 +4,131 @@ Alumnos:
 
 Entrega 1:
 
-Claves privadas
+	Claves privadas
 
-dhkey.pem :
+	dhkey.pem :
 
------BEGIN PRIVATE KEY-----
-MIICJgIBADCCARcGCSqGSIb3DQEDATCCAQgCggEBAOuazkIwY/9Xjo/khbXt1s48
-zn/lyf81j52vrU1foyuBK8jTqkKotBQ/tF13lgC+2gnMhGbG9yDVe5kSGDtcm0J2
-MoKtXHv9BNzNCK97GExtQfjeul2Ch7aS39D/COpv0NIrlcrAXo+IGNBpXbjmxr4p
-znF8Uis8ZcaUBD6PP2wyYkzSNc8Nt6j8hwo4opO97myxBLSRHm5nrktFXN8jbem7
-ncsBkD5OzFaJLKbtb7aXSLO7ga5KFQKoCYhoZzYMbdcmRFQrpS1Rwwb/0yecnnQj
-1GM9RidVNfQq1/+5iBCQ7tUIJ5IKsQeWyTNJsW7KNVHgrN7jbD/OBf6AJOqCqAsC
-AQIEggEEAoIBAGK8nI6EdeDmJd6pSZZIXI+XO2mmzhTw1OgtnkoZPQJ3UgrhYN8P
-oSUmUOjULazACjOssLAJnsvgNjOu7CcVpvzv1qVYcyl2Ov5Atz97f8VtPVYB8UUq
-gYYUAryzFou7tle8AxFjtwJIWW0w6vlCR8+/6N//tb3oE9T190mJSRXr5UUy9271
-po7wsRFt8S1kw3vN5kU7pB9T1uNIb13CMX9U6oKUlaeAFnMdTwbhMvHPXAjBBFNz
-i2SsqVe5myB9HXqgC84s++tjIxvOkvVmyuSNWc3dL29qBUu5FB5/vG9uFCUmNFDI
-p06gAMqjhjAuGbtzqR7Dd/Z8VuR/dEmjMcU=
------END PRIVATE KEY-----
+	-----BEGIN PRIVATE KEY-----
+	MIICJgIBADCCARcGCSqGSIb3DQEDATCCAQgCggEBAOuazkIwY/9Xjo/khbXt1s48
+	zn/lyf81j52vrU1foyuBK8jTqkKotBQ/tF13lgC+2gnMhGbG9yDVe5kSGDtcm0J2
+	MoKtXHv9BNzNCK97GExtQfjeul2Ch7aS39D/COpv0NIrlcrAXo+IGNBpXbjmxr4p
+	znF8Uis8ZcaUBD6PP2wyYkzSNc8Nt6j8hwo4opO97myxBLSRHm5nrktFXN8jbem7
+	ncsBkD5OzFaJLKbtb7aXSLO7ga5KFQKoCYhoZzYMbdcmRFQrpS1Rwwb/0yecnnQj
+	1GM9RidVNfQq1/+5iBCQ7tUIJ5IKsQeWyTNJsW7KNVHgrN7jbD/OBf6AJOqCqAsC
+	AQIEggEEAoIBAGK8nI6EdeDmJd6pSZZIXI+XO2mmzhTw1OgtnkoZPQJ3UgrhYN8P
+	oSUmUOjULazACjOssLAJnsvgNjOu7CcVpvzv1qVYcyl2Ov5Atz97f8VtPVYB8UUq
+	gYYUAryzFou7tle8AxFjtwJIWW0w6vlCR8+/6N//tb3oE9T190mJSRXr5UUy9271
+	po7wsRFt8S1kw3vN5kU7pB9T1uNIb13CMX9U6oKUlaeAFnMdTwbhMvHPXAjBBFNz
+	i2SsqVe5myB9HXqgC84s++tjIxvOkvVmyuSNWc3dL29qBUu5FB5/vG9uFCUmNFDI
+	p06gAMqjhjAuGbtzqR7Dd/Z8VuR/dEmjMcU=
+	-----END PRIVATE KEY-----
 
-dsakey.pem :
+	dsakey.pem :
 
------BEGIN PRIVATE KEY-----
-MIICXQIBADCCAjUGByqGSM44BAEwggIoAoIBAQDkVjGU5LA2+YtG1gC2p1o1N7IK
-+ujuIKyqaHmoN4GRhTIsY+Bn1WHwphgEN7rANlaM+G2OmiDNOofZP/gNwkQjRJhx
-aY9bjpDGSJGfoVmN7112pBBl/ads1Y7g4GVwAES6xCuT591c1IwRhi1gL2gF/nNA
-M6HM25LOipCYuVyCxuELkCLoBrJtliOXNfZwwLIuMERlrQ4e+GXmX/24CYtIC168
-fwjB9Vcg0ItXkPX8i3U4ny5vIfkkt0xtRDrFfymTLuglbTZG+nse3z8VaSIVbYGV
-U0tiq7yKg7w6fLdx9muaOgfNBy2u3pdon5wK019zEcIj+wQskG1WtvYOCz2bAh0A
-xfTxU/W6Nf8Sfi0t7sQhhwsCSbVusXg9oGnbzQKCAQA9vjLXwkzca+UW/p3G7Epc
-YsH2cZ7smp0ppHy0gxVH3EJgRfZeX6r9rNnFmEu6lTW/3GQ4GskYK1LCo5Q8BOPT
-xyL9syWG05s46P7m9p/auPoOklsMi0HC0b+G5BaxZcanN045Hkk935aNLeuN229R
-LU0VwQO+ztIqn4jEnxXO36vca1RdgVlqw1RuM8mgHnHrQ0oKFYD5RW0iCH90JuqW
-xiQeloxFHbThrt6OrZIxg0RLCHTmLVAhV7/y5NKU7hbmkkTCUpMN/niI9TFhJqP8
-+vSH7/PqqT2NmrYwuKBAlI/f733QG+Ewuu6DIBNf27kUdkzx6o9BGNVj/W3EwsLp
-BB8CHQCxa8ABaEE48uCYUVu5zHd668FkR7G4+53oWHuq
------END PRIVATE KEY-----
+	-----BEGIN PRIVATE KEY-----
+	MIICXQIBADCCAjUGByqGSM44BAEwggIoAoIBAQDkVjGU5LA2+YtG1gC2p1o1N7IK
+	+ujuIKyqaHmoN4GRhTIsY+Bn1WHwphgEN7rANlaM+G2OmiDNOofZP/gNwkQjRJhx
+	aY9bjpDGSJGfoVmN7112pBBl/ads1Y7g4GVwAES6xCuT591c1IwRhi1gL2gF/nNA
+	M6HM25LOipCYuVyCxuELkCLoBrJtliOXNfZwwLIuMERlrQ4e+GXmX/24CYtIC168
+	fwjB9Vcg0ItXkPX8i3U4ny5vIfkkt0xtRDrFfymTLuglbTZG+nse3z8VaSIVbYGV
+	U0tiq7yKg7w6fLdx9muaOgfNBy2u3pdon5wK019zEcIj+wQskG1WtvYOCz2bAh0A
+	xfTxU/W6Nf8Sfi0t7sQhhwsCSbVusXg9oGnbzQKCAQA9vjLXwkzca+UW/p3G7Epc
+	YsH2cZ7smp0ppHy0gxVH3EJgRfZeX6r9rNnFmEu6lTW/3GQ4GskYK1LCo5Q8BOPT
+	xyL9syWG05s46P7m9p/auPoOklsMi0HC0b+G5BaxZcanN045Hkk935aNLeuN229R
+	LU0VwQO+ztIqn4jEnxXO36vca1RdgVlqw1RuM8mgHnHrQ0oKFYD5RW0iCH90JuqW
+	xiQeloxFHbThrt6OrZIxg0RLCHTmLVAhV7/y5NKU7hbmkkTCUpMN/niI9TFhJqP8
+	+vSH7/PqqT2NmrYwuKBAlI/f733QG+Ewuu6DIBNf27kUdkzx6o9BGNVj/W3EwsLp
+	BB8CHQCxa8ABaEE48uCYUVu5zHd668FkR7G4+53oWHuq
+	-----END PRIVATE KEY-----
 
-eckey.pem :
+	eckey.pem :
 
------BEGIN PRIVATE KEY-----
-MG8CAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQEEVTBTAgEBBBiYYHtFiADbg8ASA4j3
-4voCVrO3IZJZIk6hNAMyAAS9JxL3PBiJ4NRk3Iig3p5FjHimvuQAyC6PNH3WEnuj
-QacRJcZAwfIgIm9GY1gmN/4=
------END PRIVATE KEY-----
+	-----BEGIN PRIVATE KEY-----
+	MG8CAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQEEVTBTAgEBBBiYYHtFiADbg8ASA4j3
+	4voCVrO3IZJZIk6hNAMyAAS9JxL3PBiJ4NRk3Iig3p5FjHimvuQAyC6PNH3WEnuj
+	QacRJcZAwfIgIm9GY1gmN/4=
+	-----END PRIVATE KEY-----
 
 Entrega 2:
 
-En el .zip
+	En el .zip
 
 Entrega 3:
 
-En el .zip
+	En el .zip
 
 Entrega 4:
 
-Hemos usado dos claves secretas secretkey1 y secretkey2 con DH.
-Hemos usado dos claves secretas secretkeyec1 y secretkeyec2 con EC.
+	Hemos usado dos claves secretas secretkey1 y secretkey2 con DH.
+	Hemos usado dos claves secretas secretkeyec1 y secretkeyec2 con EC.
 
 Entrega 5:
 
-En el .zip
+	En el .zip
 
-openssl dgst -sha256 -verify ecpubkey.pem -signature sig1.bin plain2.txt
-Verified OK
+	openssl dgst -sha256 -verify ecpubkey.pem -signature sig1.bin plain2.txt
+	Verified OK
 
-openssl dgst -sha1 -verify dsapubkey.pem -signature sig.bin plain2.txt
-Verified OK
+	openssl dgst -sha1 -verify dsapubkey.pem -signature sig.bin plain2.txt
+	Verified OK
 
 
 Entrega 6:
 
+	En el .zip
+
+	gpg2 --list-keys
+		/home/usuarioso/.gnupg/pubring.kbx
+		----------------------------------
+		pub   rsa1024 2020-02-23 [SC] [caduca: 2020-11-19]
+		      98E3491EB1C151807675487893FEABB5EBEA98C2
+		uid           [  absoluta ] Usuario SO SO2 (Prueba) <usu@usu.es>
+		sub   rsa1024 2020-02-23 [E] [caduca: 2020-11-19]
+
+		pub   dsa1024 2020-02-23 [SC] [caduca: 2020-10-20]
+		      95DBF6A755E3DECFB55F0574F4A56665DF443CF3
+		uid           [  absoluta ] Usuario SER SER2 (Prueba2) <usu@ser.es>
+		sub   elg1024 2020-02-23 [E] [caduca: 2020-10-20]
+
+	gpg2 --list-secret-keys
+		gpg: comprobando base de datos de confianza
+		gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+		gpg: nivel: 0  validez:   2  firmada:   0  confianza: 0-, 0q, 0n, 0m, 0f, 2u
+		gpg: siguiente comprobación de base de datos de confianza el: 2020-10-20
+		/home/usuarioso/.gnupg/pubring.kbx
+		----------------------------------
+		sec   rsa1024 2020-02-23 [SC] [caduca: 2020-11-19]
+		      98E3491EB1C151807675487893FEABB5EBEA98C2
+		uid           [  absoluta ] Usuario SO SO2 (Prueba) <usu@usu.es>
+		ssb   rsa1024 2020-02-23 [E] [caduca: 2020-11-19]
+
+		sec   dsa1024 2020-02-23 [SC] [caduca: 2020-10-20]
+		      95DBF6A755E3DECFB55F0574F4A56665DF443CF3
+		uid           [  absoluta ] Usuario SER SER2 (Prueba2) <usu@ser.es>
+		ssb   elg1024 2020-02-23 [E] [caduca: 2020-10-20]
 
 
+Entrega 7:
 
+	services.gpg y services2.gpg
+
+	gpg2 --encrypt --recipient 'Usuario SER SER2' services
+
+
+	gpg2 --decrypt services.gpg
+	gpg: cifrado con clave ELG de 1024 bits, ID 9A00C08AC87F9C7A, creada el 2020-02-23
+	      "Usuario SER SER2 (Prueba2) <usu@ser.es>"
+	cifrado GnuPG
+
+
+Entrega 8:
+
+	gpg2 --verify servicesSing_sha256.gpg
+		gpg: Firmado el dom 23 feb 2020 20:13:50 CET
+		gpg:                usando RSA clave 98E3491EB1C151807675487893FEABB5EBEA98C2
+		gpg: Firma correcta de "Usuario SO SO2 (Prueba) <usu@usu.es>" [absoluta]
+		
+	gpg2 --verify servicesSing2_sha1.gpg
+		gpg: Firmado el dom 23 feb 2020 20:14:18 CET
+		gpg:                usando RSA clave 98E3491EB1C151807675487893FEABB5EBEA98C2
+		gpg: Firma correcta de "Usuario SO SO2 (Prueba) <usu@usu.es>" [absoluta]
