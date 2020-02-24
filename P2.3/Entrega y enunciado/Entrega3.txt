@@ -1,0 +1,32 @@
+Alumnos: 
+	- Víctor Manuel Cavero Gracia
+	- José Miguel Cabrera Llamas 
+
+Entrega 1:
+
+	cacert.pem y cakey.pem
+	En el zip.
+
+Entrega 2:
+
+	user1csr.pem y user2csr.pem
+	En el zip.
+
+Entrega 3:
+
+	En el zip.
+
+	openssl verify -CAfile demoCA/cacert.pem user1cert.pem
+		user1cert.pem: OK
+	openssl verify -CAfile demoCA/cacert.pem user2cert.pem
+		user2cert.pem: OK
+
+Entrega 4:
+
+	user1cert.der, user1cert.p12, user2cert.der y user2cert.p12
+	En el zip.
+
+Entrega 5:
+
+	crl.pem
+	En el zip.

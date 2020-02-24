@@ -1,0 +1,3 @@
+V	210223153823Z		01	unknown	/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=Usuario 1 SER
+R	210223153838Z	200224194514Z	02	unknown	/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=Usuario2 SER
+R	210223160143Z	200224194130Z	03	unknown	/C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=Usuario 2 SER
