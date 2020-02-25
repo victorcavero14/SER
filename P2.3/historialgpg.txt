@@ -1,0 +1,25 @@
+ 2032  gpg --list-keys
+ 2033  gpg --full-gen-key
+ 2034  gpg --list-keys
+ 2035  gpg --full-gen-key
+ 2036  gpg --list-keys
+ 2037  gpg --list-secret-keys
+ 2038  gpg --list-keys
+ 2039  gpg --sign-key --local-user user2 user1
+ 2040  gpg --sign-key --local-user user3 user2
+ 2041  gpg --edit-key user2 trust quit
+ 2042  gpg --edit-key user3 trust quit
+ 2043  gpg --list-options show-uid-validity --list-keys
+ 2044  gpg --edit-key user2 trust quit
+ 2045  gpg --list-options show-uid-validity --list-keys
+ 2046  gpg --full-gen-key
+ 2047  gpg --sign-key --local-user user4 user1
+ 2048* 
+ 2049  gpg --list-options show-uid-validity --list-keys
+ 2050  gpg --edit-key user4 trust quit
+ 2051  gpg --edit-key user5 trust quit
+ 2052  gpg --sign-key --local-user user3 user4
+ 2053  gpg --sign-key --local-user user3 user5
+ 2054  gpg --list-options show-uid-validity --list-keys
+ 2055  gpg --check-trustdb
+

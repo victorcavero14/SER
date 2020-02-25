@@ -30,3 +30,48 @@ Entrega 5:
 
 	crl.pem
 	En el zip.
+
+Entrega 6:
+
+	$ gpg --list-options show-uid-validity --list-keys
+
+	gpg: comprobando base de datos de confianza
+	gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+	gpg: nivel: 0  validez:   1  firmada:   0  confianza: 0-, 0q, 0n, 0m, 0f, 1u
+	/home/victorcavero14/.gnupg/pubring.kbx
+	---------------------------------------
+	pub   rsa1024 2020-02-25 [SC]
+	      D47678622E61890E2184C69FCC91C2862554F129
+	uid        [  absoluta ] user1
+	sub   rsa1024 2020-02-25 [E]
+
+	pub   rsa1024 2020-02-25 [SC]
+	      84A01CFFB8439280023733AB7ABE493C69BD283F
+	uid        [desconocida] user2
+	sub   rsa1024 2020-02-25 [E]
+
+	pub   rsa1024 2020-02-25 [SC]
+	      CB3A34944439824B1ADD3E4C531F957332E5624D
+	uid        [desconocida] user3
+	sub   rsa1024 2020-02-25 [E]
+
+	pub   rsa1024 2020-02-25 [SC]
+	      C7CFE63F52A348B3B60C2F2F6FC7D4B2AF15DC2B
+	uid        [desconocida] user4
+	sub   rsa1024 2020-02-25 [E]
+
+	pub   rsa1024 2020-02-25 [SC]
+	      6DCDFB5439645440196598E23C2D1198CA44FBCC
+	uid        [desconocida] user5
+	sub   rsa1024 2020-02-25 [E]
+
+	$ gpg --check-trustdb
+
+	gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+
+	gpg: nivel: 0  validez:   1  firmada:   0  confianza: 0-, 0q, 0n, 0m, 0f, 1u
+
+
+
+
+
