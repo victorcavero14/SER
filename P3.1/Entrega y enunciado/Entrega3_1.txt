@@ -1,0 +1,174 @@
+Alumnos: 
+	- Víctor Manuel Cavero Gracia
+	- José Miguel Cabrera Llamas
+
+
+Entrega 1:
+
+	192.168.1.12 dev eth1 lladdr 00:01:02:03:04:05 PERMANENT
+
+Entrega 2:
+
+	- Comando nPing: 
+	
+		Starting Nping 0.6.00 ( http://nmap.org/nping ) at 2020-03-03 12:49 CET
+		SENT (0.0117s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (1.0122s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (2.0139s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (3.0154s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (4.0168s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (5.0188s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (6.0203s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (7.0217s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (8.0231s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (9.0248s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (10.0266s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (11.0281s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (12.0300s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (13.0315s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (14.0329s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (15.0345s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (16.0359s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (17.0373s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (18.0388s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (19.0401s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (20.0410s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (21.0424s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (22.0429s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (23.0453s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (24.0468s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (25.0482s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (26.0496s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (27.0512s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (28.0526s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (29.0541s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (30.0558s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (31.0572s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (32.0586s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (33.0600s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (34.0614s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (35.0628s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (36.0636s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (37.0650s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (38.0664s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (39.0678s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (40.0693s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (41.0721s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (42.0743s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		SENT (43.0759s) ARP reply 192.168.1.12 is at 00:01:02:03:04:05
+		^C 
+		Max rtt: N/A | Min rtt: N/A | Avg rtt: N/A
+		Raw packets sent: 44 (1.848KB) | Rcvd: 0 (0B) | Lost: 44 (100.00%)
+		Tx time: 43.62865s | Tx bytes/s: 42.36 | Tx pkts/s: 1.01
+		Rx time: 43.62865s | Rx bytes/s: 0.00 | Rx pkts/s: 0.00
+		Nping done: 1 IP address pinged in 43.64 seconds
+
+	- sudo ip neig show:
+
+		192.168.1.12 dev eth1 lladdr 00:01:02:03:04:05 PROBE
+
+- Entrega 3:
+
+		- ARP Spoofing: 
+
+			8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		^CCleaning up and re-arping targets...
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+
+	- Tabla ARP victima 1:
+
+		192.168.1.10 dev eth1 lladdr 08:00:27:53:fa:b3 STALE
+		192.168.1.12 dev eth1 lladdr 08:00:27:21:d4:2b REACHABLE
+
+
+- Entrega 4 :
+
+
+	- Ataque man-in-the-middle:
+
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:53:fa:b3
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:53:fa:b3
+		^CCleaning up and re-arping targets...
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:5b:db:ce
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:5b:db:ce
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:5b:db:ce
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:5b:db:ce
+		8:0:27:53:fa:b3 8:0:27:5b:db:ce 0806 42: arp reply 192.168.1.12 is-at 8:0:27:21:d4:2b
+		8:0:27:53:fa:b3 8:0:27:21:d4:2b 0806 42: arp reply 192.168.1.11 is-at 8:0:27:5b:db:ce
+
+	- ARP Victima 1:
+
+		192.168.1.12 dev eth1 lladdr 08:00:27:21:d4:2b REACHABLE
+
+	- ARP Victima 2:
+
+		192.168.1.11 dev eth1 lladdr 08:00:27:5b:db:ce STALE
+
+
