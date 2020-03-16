@@ -1,0 +1,160 @@
+Alumnos: 
+	- Víctor Manuel Cavero Gracia
+	- José Miguel Cabrera Llamas 
+
+Entrega 1:
+
+	- Comando: $sudo hping3 --icmp --flood --rand-source 192.168.1.11
+		HPING 192.168.1.11 (eth1 192.168.1.11): icmp mode set, 28 headers + 0 data bytes
+		hping in flood mode, no replies will be shown
+		^C
+		--- 192.168.1.11 hping statistic ---
+		664021 packets transmitted, 0 packets received, 100% packet loss
+		round-trip min/avg/max = 0.0/0.0/0.0 ms
+
+Entrega 2:
+
+	- Comando: $ip route show cache
+		local 192.168.1.11 from 192.168.1.10 dev lo  src 192.168.1.11 
+		    cache <local,src-direct>  iif eth1
+		local 192.168.1.11 from 192.168.1.1 dev lo  src 192.168.1.11 
+		    cache <local,src-direct>  iif eth1
+
+
+Entrega 3:
+
+	- Comando: $netstat -ant
+		Active Internet connections (servers and established)
+		Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+		tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN     
+		tcp        0      0 192.168.1.11:80         192.168.1.200:24769     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:15510     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:14969     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:35447     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:38566     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:19660     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:19659     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:35448     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:24418     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:3080      SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:38567     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:8768      SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:35449     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:57482     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:57481     SYN_RECV   
+		tcp        0      0 192.168.1.11:80         192.168.1.200:43909     SYN_RECV   
+		tcp        0      0 0.0.0.0:21              0.0.0.0:*               LISTEN     
+		tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+		tcp        0      0 0.0.0.0:23              0.0.0.0:*               LISTEN     
+		tcp6       0      0 :::22                   :::*                    LISTEN 
+
+
+Entrega 4:
+
+	- Comando metodo connect: $nmap -sT 192.168.1.11 -p 20-25
+
+		Starting Nmap 6.00 ( http://nmap.org ) at 2020-03-16 15:08 CET
+		Nmap scan report for 192.168.1.11
+		Host is up (0.0016s latency).
+		PORT   STATE  SERVICE
+		20/tcp closed ftp-data
+		21/tcp open   ftp
+		22/tcp open   ssh
+		23/tcp open   telnet
+		24/tcp closed priv-mail
+		25/tcp closed smtp
+		MAC Address: 08:00:27:5B:DB:CE (Cadmus Computer Systems)
+
+		Nmap done: 1 IP address (1 host up) scanned in 13.13 seconds
+	- Comando metodo SYN stealth: $sudo nmap -sS 192.168.1.11 -p 20-25
+
+		Starting Nmap 6.00 ( http://nmap.org ) at 2020-03-16 15:10 CET
+		Nmap scan report for 192.168.1.11
+		Host is up (0.00060s latency).
+		PORT   STATE  SERVICE
+		20/tcp closed ftp-data
+		21/tcp open   ftp
+		22/tcp open   ssh
+		23/tcp open   telnet
+		24/tcp closed priv-mail
+		25/tcp closed smtp
+		MAC Address: 08:00:27:5B:DB:CE (Cadmus Computer Systems)
+
+		Nmap done: 1 IP address (1 host up) scanned in 13.10 seconds
+	- Comando metodo ACK: $sudo nmap -sA 192.168.1.11 -p 20-25
+
+		Starting Nmap 6.00 ( http://nmap.org ) at 2020-03-16 15:11 CET
+		Nmap scan report for 192.168.1.11
+		Host is up (0.00077s latency).
+		PORT   STATE      SERVICE
+		20/tcp unfiltered ftp-data
+		21/tcp unfiltered ftp
+		22/tcp unfiltered ssh
+		23/tcp unfiltered telnet
+		24/tcp unfiltered priv-mail
+		25/tcp unfiltered smtp
+		MAC Address: 08:00:27:5B:DB:CE (Cadmus Computer Systems)
+
+		Nmap done: 1 IP address (1 host up) scanned in 13.10 seconds
+	- Comando metodo FIN: $sudo nmap -sF 192.168.1.11 -p 20-25
+
+		Starting Nmap 6.00 ( http://nmap.org ) at 2020-03-16 15:11 CET
+		Nmap scan report for 192.168.1.11
+		Host is up (0.00045s latency).
+		PORT   STATE         SERVICE
+		20/tcp closed        ftp-data
+		21/tcp open|filtered ftp
+		22/tcp open|filtered ssh
+		23/tcp open|filtered telnet
+		24/tcp closed        priv-mail
+		25/tcp closed        smtp
+		MAC Address: 08:00:27:5B:DB:CE (Cadmus Computer Systems)
+
+		Nmap done: 1 IP address (1 host up) scanned in 14.33 seconds
+	- Comando metodo NULL: $sudo nmap -sN 192.168.1.11 -p 20-25
+
+		Starting Nmap 6.00 ( http://nmap.org ) at 2020-03-16 15:11 CET
+		Nmap scan report for 192.168.1.11
+		Host is up (0.00052s latency).
+		PORT   STATE         SERVICE
+		20/tcp closed        ftp-data
+		21/tcp open|filtered ftp
+		22/tcp open|filtered ssh
+		23/tcp open|filtered telnet
+		24/tcp closed        priv-mail
+		25/tcp closed        smtp
+		MAC Address: 08:00:27:5B:DB:CE (Cadmus Computer Systems)
+
+		Nmap done: 1 IP address (1 host up) scanned in 14.30 seconds
+
+Entrega 5:
+
+	- Comando: sudo nmap -O 192.168.1.11
+
+		Starting Nmap 6.00 ( http://nmap.org ) at 2020-03-16 15:16 CET
+		Nmap scan report for 192.168.1.11
+		Host is up (0.00062s latency).
+		Not shown: 997 closed ports
+		PORT   STATE SERVICE
+		21/tcp open  ftp
+		22/tcp open  ssh
+		23/tcp open  telnet
+		MAC Address: 08:00:27:5B:DB:CE (Cadmus Computer Systems)
+		No exact OS matches for host (If you know what OS is running on it, see http://nmap.org/submit/ ).
+		TCP/IP fingerprint:
+		OS:SCAN(V=6.00%E=4%D=3/16%OT=21%CT=1%CU=39439%PV=Y%DS=1%DC=D%G=Y%M=080027%T
+		OS:M=5E6F8A4C%P=x86_64-unknown-linux-gnu)SEQ(SP=103%GCD=1%ISR=10B%TI=Z%CI=I
+		OS:%II=I%TS=8)OPS(O1=M5B4ST11NW4%O2=M5B4ST11NW4%O3=M5B4NNT11NW4%O4=M5B4ST11
+		OS:NW4%O5=M5B4ST11NW4%O6=M5B4ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=38
+		OS:90%W6=3890)ECN(R=Y%DF=Y%T=41%W=3908%O=M5B4NNSNW4%CC=Y%Q=)T1(R=Y%DF=Y%T=4
+		OS:1%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=41%W=0%S=A%A=Z%F=R%O
+		OS:=%RD=0%Q=)T5(R=Y%DF=Y%T=41%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=41
+		OS:%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=41%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q
+		OS:=)U1(R=Y%DF=N%T=41%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y
+		OS:%DFI=N%T=41%CD=S)
+
+		Network Distance: 1 hop
+
+		OS detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+		Nmap done: 1 IP address (1 host up) scanned in 25.66 seconds
+
