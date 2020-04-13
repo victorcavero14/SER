@@ -33,3 +33,88 @@ Entrega 1:
 	04/13-13:19:20.811263 1.1.1.10 -> 192.168.1.10
 	ICMP TTL:63 TOS:0x0 ID:15618 IpLen:20 DgmLen:84 DF
 	Type:8  Code:0  ID:5807   Seq:3  ECHO
+
+Entrega 2:
+
+	Comando realizado en maquina externa: ping -t 101 -s 200 192.168.1.10
+
+	[**] [1:366:7] ICMP PING *NIX [**]
+	[Classification: Misc activity] [Priority: 3] 
+	04/13-15:17:09.874829 1.1.1.10 -> 192.168.1.10
+	ICMP TTL:100 TOS:0x0 ID:5525 IpLen:20 DgmLen:228 DF
+	Type:8  Code:0  ID:3435   Seq:3  ECHO
+
+	[**] [1:480:5] ICMP PING speedera [**]
+	[Classification: Misc activity] [Priority: 3] 
+	04/13-15:17:09.874829 1.1.1.10 -> 192.168.1.10
+	ICMP TTL:100 TOS:0x0 ID:5525 IpLen:20 DgmLen:228 DF
+	Type:8  Code:0  ID:3435   Seq:3  ECHO
+
+	[**] [1:10000001:1] Special ping [**]
+	[Priority: 0] 
+	04/13-15:17:09.874829 1.1.1.10 -> 192.168.1.10
+	ICMP TTL:100 TOS:0x0 ID:5525 IpLen:20 DgmLen:228 DF
+	Type:8  Code:0  ID:3435   Seq:3  ECHO
+
+Entrega 3:
+
+	[**] [122:1:0] (portscan) TCP Portscan [**]
+	[Priority: 3] 
+	04/13-15:23:40.429899 1.1.1.10 -> 192.168.1.10
+	PROTO:255 TTL:64 TOS:0x0 ID:30525 IpLen:20 DgmLen:152 DF
+
+	[**] [1:1418:11] SNMP request tcp [**]
+	[Classification: Attempted Information Leak] [Priority: 2] 
+	04/13-15:23:40.434432 1.1.1.10:54672 -> 192.168.1.10:161
+	TCP TTL:41 TOS:0x0 ID:52648 IpLen:20 DgmLen:44
+	******S* Seq: 0xA316C60D  Ack: 0x0  Win: 0x400  TcpLen: 24
+	TCP Options (1) => MSS: 1460 
+	[Xref => http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0013][Xref => http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0012][Xref => http://www.securityfocus.com/bid/4132][Xref => http://www.securityfocus.com/bid/4089][Xref => http://www.securityfocus.com/bid/4088]
+
+	[**] [1:1421:11] SNMP AgentX/tcp request [**]
+	[Classification: Attempted Information Leak] [Priority: 2] 
+	04/13-15:23:40.472606 1.1.1.10:54672 -> 192.168.1.10:705
+	TCP TTL:50 TOS:0x0 ID:15708 IpLen:20 DgmLen:44
+	******S* Seq: 0xA316C60D  Ack: 0x0  Win: 0x400  TcpLen: 24
+	TCP Options (1) => MSS: 1460 
+	[Xref => http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0013][Xref => http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0012][Xref => http://www.securityfocus.com/bid/4132][Xref => http://www.securityfocus.com/bid/4089][Xref => http://www.securityfocus.com/bid/4088]
+
+Entrega 4:
+
+	[**] [112:4:1] (spp_arpspoof) Attempted ARP cache overwrite attack [**]
+	04/13-16:27:01.330704 
+
+	[**] [112:2:1] (spp_arpspoof) Ethernet/ARP Mismatch request for Source [**]
+	04/13-16:27:03.332383 
+
+	[**] [112:4:1] (spp_arpspoof) Attempted ARP cache overwrite attack [**]
+	04/13-16:27:03.332383 
+
+
+Entrega 5:
+
+	[**] [1:10000002:1] External Access to Tomcat Manager [**]
+	[Priority: 0] 
+	04/13-16:31:41.804147 1.1.1.10:43999 -> 192.168.1.11:8180
+	TCP TTL:63 TOS:0x0 ID:55950 IpLen:20 DgmLen:403 DF
+	***AP*** Seq: 0x33328CA6  Ack: 0x4F0C3C26  Win: 0x391  TcpLen: 32
+	TCP Options (3) => NOP NOP TS: 1988150 794791 
+
+	[**] [1:10000002:1] External Access to Tomcat Manager [**]
+	[Priority: 0] 
+	04/13-16:31:43.226874 1.1.1.10:43999 -> 192.168.1.11:8180
+	TCP TTL:63 TOS:0x0 ID:55952 IpLen:20 DgmLen:446 DF
+	***AP*** Seq: 0x33328E05  Ack: 0x4F0C4108  Win: 0x446  TcpLen: 32
+	TCP Options (3) => NOP NOP TS: 1988506 794796
+
+Entrega 6:
+
+	[**] [1:10000003:1] FTP server Smiley Face Backdoor [**]
+	[Priority: 0] 
+	04/13-16:37:26.237690 1.1.1.10:57433 -> 192.168.1.11:21
+	TCP TTL:63 TOS:0x0 ID:8432 IpLen:20 DgmLen:66 DF
+	***AP*** Seq: 0xCF4ABDEF  Ack: 0x87848D61  Win: 0x391  TcpLen: 32
+	TCP Options (3) => NOP NOP TS: 2074259 828276 
+
+
+
