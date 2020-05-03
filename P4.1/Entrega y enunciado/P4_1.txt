@@ -1,0 +1,57 @@
+Alumnos: 
+	- Víctor Manuel Cavero Gracia
+	- José Miguel Cabrera Llamas 
+	
+	Para crear los certificados hemos utilizado la contraseña "seguridad". 
+
+Entrega 1:
+
+	cacert.pem y cakey.pem en el zip
+
+Entrega 2:
+
+	$ netstat -ant
+	Active Internet connections (servers and established)
+	Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+	tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+	tcp6       0      0 :::80                   :::*                    LISTEN     
+	tcp6       0      0 :::22                   :::*                    LISTEN     
+	tcp6       0      0 :::443                  :::*                    LISTEN     
+	tcp6       0      0 192.168.1.1:443         192.168.1.2:35937       TIME_WAIT 
+
+Entrega 3:
+
+	Hemos adjuntado una captura de pantalla con las propiedades de la conexión.
+
+Entrega 4:
+
+	1) ClientHello: TLS 1.1
+	2) ClientHello soporta 14 cipher suites (Adjuntadas en captura de pantalla)
+	3) ServerHello: TLS 1.1
+	4) ServerHello: Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+	5) Certificate: signature (shaWithRSAEncryption) Algorithm Id: 1.2.840.113549.1.1.5 (shaWithRSAEncryption)
+	6) Pubkey Length: 65
+
+Entrega 5:
+
+	Web server wwww.lab.ser
+
+	Secure connection from 192.168.1.2
+
+	Server Id: /C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=wwww.lab.ser
+	Signing CA: /C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=CA
+
+Entrega 6:
+
+	Web server wwww.lab.ser
+
+	Secure connection from 192.168.1.2
+
+	Server Id: /C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=wwww.lab.ser
+	Signing CA: /C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=CA
+
+	Client verified successfully.
+
+	Client Id: /C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=usuario
+	Signing CA: /C=AU/ST=Some-State/O=Internet Widgits Pty Ltd/CN=CA
+	
