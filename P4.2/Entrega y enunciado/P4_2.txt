@@ -1,0 +1,723 @@
+Alumnos: 
+	- Víctor Manuel Cavero Gracia
+	- José Miguel Cabrera Llamas 
+	
+	Para los usuarios hemos utilizado la contraseña "seguridad". 
+
+Entrega 1:
+
+	$ telnet localhost 25
+	Trying ::1...
+	Connected to localhost.
+	Escape character is '^]'.
+	220 debian ESMTP Postfix (Debian/GNU)
+	HELO mailserver.lab.ser
+	250 debian
+	QUIT
+	221 2.0.0 Bye
+	Connection closed by foreign host.
+
+Entrega 2:
+
+	Hemos tenido que darle permisos a la carpeta /var/mail para la creación del "Inbox" con el comando : sudo chmod a+rwxt /var/mail
+
+	$ sudo telnet localhost 143
+	Trying ::1...
+	Connected to localhost.
+	Escape character is '^]'.
+	* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE AUTH=PLAIN] Dovecot ready.
+	a LOGIN
+	a BAD Error in IMAP command received by server.
+	a LOGIN benito seguridad
+	a OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS MULTIAPPEND UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS SPECIAL-USE] Logged in
+	a LIST "" *
+	* LIST (\HasNoChildren) "/" "INBOX"
+	a OK List completed.
+	a EXAMINE Inbox
+	* FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
+	* OK [PERMANENTFLAGS ()] Read-only mailbox.
+	* 0 EXISTS
+	* 0 RECENT
+	* OK [UIDVALIDITY 1588680883] UIDs valid
+	* OK [UIDNEXT 1] Predicted next UID
+	* OK [NOMODSEQ] No permanent modsequences
+	a OK [READ-ONLY] Select completed.
+	a LOGOUT
+	* BYE Logging out
+	a OK Logout completed.
+	Connection closed by foreign host.
+
+Entrega 3:
+
+	Mail de Ana a Benito : 
+
+		Paquetes SMTP:
+
+			220 debian ESMTP Postfix (Debian/GNU)
+
+			EHLO host1.lab.ser
+
+			250-debian
+
+			250-PIPELINING
+
+			250-SIZE 10240000
+
+			250-VRFY
+
+			250-ETRN
+
+			250-ENHANCEDSTATUSCODES
+
+			250-8BITMIME
+
+			250 DSN
+
+			MAIL FROM:<ana@mailserver.lab.ser> SIZE=419
+
+			250 2.1.0 Ok
+
+			RCPT TO:<benito@mailserver.lab.ser>
+
+			250 2.1.5 Ok
+
+			DATA
+
+			354 End data with <CR><LF>.<CR><LF>
+
+			To: benito@mailserver.lab.ser
+
+			From: =?UTF-8?Q?Ana_S=c3=a1nchez_Fern=c3=a1ndez?= <ana@mailserver.lab.ser>
+
+			Subject: Hola
+
+			Message-ID: <5EB15A42.5070104@mailserver.lab.ser>
+
+			Date: Tue, 5 May 2020 14:21:22 +0200
+
+			User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101
+
+			Icedove/38.7.0
+
+			MIME-Version: 1.0
+
+			Content-Type: text/plain; charset=utf-8; format=flowed
+
+			Content-Transfer-Encoding: 7bit
+
+
+
+			Un saludo.
+
+			.
+
+			250 2.0.0 Ok: queued as 7B55820D9D
+
+			QUIT
+
+			221 2.0.0 Bye
+
+		Paquetes IMAP:
+
+			* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE AUTH=PLAIN] Dovecot ready.
+
+			1 authenticate plain
+
+			+ 
+
+			AGFuYQBzZWd1cmlkYWQ=
+
+			1 OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS MULTIAPPEND UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS SPECIAL-USE] Logged in
+
+			2 namespace
+
+			* NAMESPACE (("" "/")) NIL NIL
+
+			2 OK Namespace completed.
+
+			3 ID ("name" "Icedove" "version" "38.7.0")
+
+			* ID NIL
+
+			3 OK ID completed.
+
+			4 list (subscribed) "" "*" return (special-use)
+
+			4 OK List completed.
+
+			5 list "" "INBOX"
+
+			* LIST (\HasNoChildren) "/" "INBOX"
+
+			5 OK List completed.
+
+			6 list "" "Trash"
+
+			6 OK List completed.
+
+			7 create "Trash"
+
+			7 OK Create completed.
+
+			8 subscribe "Trash"
+
+			8 OK Subscribe completed.
+
+			9 list "" "Trash"
+
+			* LIST (\NoInferiors \UnMarked \Trash) "/" "Trash"
+
+			9 OK List completed.
+
+			10 list "" "Sent"
+
+			10 OK List completed.
+
+			11 create "Sent"
+
+			11 OK Create completed.
+
+			12 subscribe "Sent"
+
+			12 OK Subscribe completed.
+
+			13 list "" "Sent"
+
+			* LIST (\NoInferiors \UnMarked \Sent) "/" "Sent"
+
+			13 OK List completed.
+
+Entrega 4:
+
+	Mensaje de Ana a Benito:
+		
+		Paquetes SMTP:
+
+			220 debian ESMTP Postfix (Debian/GNU)
+
+			EHLO host1.lab.ser
+
+			250-debian
+
+			250-PIPELINING
+
+			250-SIZE 10240000
+
+			250-VRFY
+
+			250-ETRN
+
+			250-ENHANCEDSTATUSCODES
+
+			250-8BITMIME
+
+			250 DSN
+
+			MAIL FROM:<ana@mailserver.lab.ser> SIZE=5950
+
+			250 2.1.0 Ok
+
+			RCPT TO:<benito@mailserver.lab.ser>
+
+			250 2.1.5 Ok
+
+			DATA
+
+			354 End data with <CR><LF>.<CR><LF>
+
+			To: benito@mailserver.lab.ser
+
+			From: =?UTF-8?Q?Ana_S=c3=a1nchez_Fern=c3=a1ndez?= <ana@mailserver.lab.ser>
+
+			Subject: Hola
+
+			Message-ID: <5EB163B0.1000903@mailserver.lab.ser>
+
+			Date: Tue, 5 May 2020 15:01:36 +0200
+
+			User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101
+
+			Icedove/38.7.0
+
+			MIME-Version: 1.0
+
+			Content-Type: application/pkcs7-mime; name="smime.p7m"; smime-type=enveloped-data
+
+			Content-Transfer-Encoding: base64
+
+			Content-Disposition: attachment; filename="smime.p7m"
+
+			Content-Description: S/MIME Encrypted Message
+
+
+
+			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
+
+			AAAAAAA=
+
+			.
+
+			250 2.0.0 Ok: queued as C1E3720DD1
+
+			QUIT
+
+			221 2.0.0 Bye
+
+		Paquetes IMAP:
+
+			DONE
+
+			72 OK Idle completed.
+
+			73 append "Sent" (\Seen) {5950+}
+
+			To: benito@mailserver.lab.ser
+
+			From: =?UTF-8?Q?Ana_S=c3=a1nchez_Fern=c3=a1ndez?= <ana@mailserver.lab.ser>
+
+			Subject: Hola
+
+			Message-ID: <5EB163B0.1000903@mailserver.lab.ser>
+
+			Date: Tue, 5 May 2020 15:01:36 +0200
+
+			User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101
+
+			Icedove/38.7.0
+
+			MIME-Version: 1.0
+
+			Content-Type: application/pkcs7-mime; name="smime.p7m"; smime-type=enveloped-data
+
+			Content-Transfer-Encoding: base64
+
+			Content-Disposition: attachment; filename="smime.p7m"
+
+			Content-Description: S/MIME Encrypted Message
+
+
+
+			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
+
+			AAAAAAA=
+
+
+
+			* 2 EXISTS
+
+			* 2 RECENT
+
+			73 OK [APPENDUID 1588681282 2] Append completed.
+
+			74 noop
+
+			74 OK NOOP completed.
+
+			75 IDLE
+
+			+ idling
+
+			DONE
+
+			75 OK Idle completed.
+
+			76 noop
+
+			76 OK NOOP completed.
+
+			77 UID fetch 2:* (FLAGS)
+
+			* 2 FETCH (UID 2 FLAGS (\Seen \Recent))
+
+			77 OK Fetch completed.
+
+			78 UID fetch 2 (UID RFC822.SIZE FLAGS BODY.PEEK[HEADER.FIELDS (From To Cc Bcc Subject Date Message-ID Priority X-Priority References Newsgroups In-Reply-To Content-Type Reply-To)])
+
+			* 2 FETCH (UID 2 RFC822.SIZE 5950 FLAGS (\Seen \Recent) BODY[HEADER.FIELDS (FROM TO CC BCC SUBJECT DATE MESSAGE-ID PRIORITY X-PRIORITY REFERENCES NEWSGROUPS IN-REPLY-TO CONTENT-TYPE REPLY-TO)] {296}
+
+			To: benito@mailserver.lab.ser
+
+			From: =?UTF-8?Q?Ana_S=c3=a1nchez_Fern=c3=a1ndez?= <ana@mailserver.lab.ser>
+
+			Subject: Hola
+
+			Message-ID: <5EB163B0.1000903@mailserver.lab.ser>
+
+			Date: Tue, 5 May 2020 15:01:36 +0200
+
+			Content-Type: application/pkcs7-mime; name="smime.p7m"; smime-type=enveloped-data
+
+
+
+			)
+
+			78 OK Fetch completed.
+
+			79 IDLE
+
+			+ idling
+
+			DONE
+
+			79 OK Idle completed.
+
+			80 noop
+
+			80 OK NOOP completed.
+
+			81 UID fetch 3:* (FLAGS)
+
+			* 2 FETCH (UID 2 FLAGS (\Seen \Recent))
+
+			81 OK Fetch completed.
+
+			82 IDLE
+
+			+ idling
+
+			* OK Still here
+
+			DONE
+
+			82 OK Idle completed.
+
+			83 check
+
+			83 OK Check completed.
+
+			84 UID fetch 3:* (FLAGS)
+
+			* 2 FETCH (UID 2 FLAGS (\Seen \Recent))
+
+			84 OK Fetch completed.
+
+			85 IDLE
+
+			+ idling
+
+			* OK Still here
+
+			DONE
+
+			85 OK Idle completed.
+
+			86 noop
+
+			86 OK NOOP completed.
+
+			87 UID fetch 3:* (FLAGS)
+
+			* 2 FETCH (UID 2 FLAGS (\Seen \Recent))
+
+			87 OK Fetch completed.
+
+			88 IDLE
+
+			+ idling
+
+Entrega 5: 
+
+	Content-Type: text/plain; charset=utf-8; format=flowed
+
+	Content-Type: application/pkcs7-mime; name="smime.p7m"; smime-type=enveloped-data
+
+	En la entrega 3 se envía el texto directamente (texto plano) que puede observarse en los paquetes con wireshark
+	pero por el contrario en la entrega 4 los paquetes han sido encriptados con la clave privada del usuario
+	que envía el correo.
+
+						
+
+							
+
+
+
+							
+
