@@ -1,0 +1,212 @@
+Víctor Manuel Cavero Gracia 3ºA
+
+
+1. Explica qué es y para qué se usa el vector de inicialización en el cifrado simétrico de bloque
+
+Respuesta: 
+
+El cifrado simétrico principalmente se basa en mantener una clave secreta entre los dos dispositivos que realizan la comunicación y en concreto de bloque porque se hace de un tamaño fijo y el texto cifrado es de igual tamaño que la entrada.
+
+El vector de inicialización se utiliza como parámetro extra en algunos algoritmos y se genera de forma aleatoria o pseudo-aleatoria. Se usa como valor inicial del cifrado y a diferencia de la clave secreta el vector de inicialización no es necesario mantenerlo oculto. 
+
+Se usa en algoritmos como CBC o CFB.
+
+2. 2.b. Supongamos que utilizo openssl para calcular la función hash SHA-256 de dos ficheros distintos, file1 y file2, mediante los siguiente comandos:
+
+$ openssl dgst –sha256 file1
+$ openssl dgst –sha256 file2
+Indica si las siguientes afirmaciones son verdaderas o falsas:
+
+a) Si suponemos que el contenido de file1 y file2 es idéntico, el resultado de los dos comandos anteriores debería ser siempre el mismo
+
+b) Si suponemos que file1 es de mayor tamaño que file2, la función hash SHA-256 de file1 será de mayor longitud que la de file2.
+
+c) A partir del valor de la función hash SHA-256 de file1 siempre es posible obtener el contenido original de file1, si conocemos la clave correspondiente
+
+Respuesta:
+
+a)  Verdadero. Ya el algoritmo sha256 preserva la integridad de los datos 
+
+
+
+b) Falso. El tamaño del digest en con el sha256 siempre es de 256 bits.
+
+
+
+c) Falso. Seria necesario conocer el algoritmo de digest utilizado ya que son los MAC los que utilizan la clave privada para preservar la autenticidad.
+
+
+
+3. Existen dos técnicas criptográficas para garantizar la integridad y la autenticación de un mensaje: los códigos de autenticación de mensajes (MAC/HMAC) y la firma digital. ¿Cuál es la principal diferencia entre ambas técnicas?
+
+Respuesta:
+
+Existen varias diferencias, una de ellas y quizás la principal es que MAC/HMAC utiliza una clave simétrica secreta y compartida por ambas partes, pero la firma digital se utiliza en la criptografía de clave pública (que utiliza claves privadas y públicas) .
+
+MAC/HMAC encripta el digest del mensaje original con la clave secreta compartida y al llegar al receptor se desencripta mediante esa misma clave y se compara con su propio calculo del digest.
+
+En la firma digital se realiza un digest del mensaje original y se cifra con la clave privada del usuario y es esa clave la que se manda junto a los datos, y luego es el que la recibe la descifra con la clave pública de quien le ha mandado los datos y compara los valores hash con su propio cálculo.
+
+
+4. ¿Pará que sirve el formato de certificado digital PKCS12? ¿En qué entornos se usa?
+
+Respuesta:
+
+El formato PKCS12 (Public-Key Criptography Standards) permite almacenar el certificado X.509 junto con la clave privada en un solo fichero. Este se suele utilizar en los navegadores web o en clientes de correo. 
+
+Hemos hecho uso de este formato de certificado digital en alguna de las practica como la 4.1 donde creamos un servidor web seguro.
+
+5. ¿Explica en qué consiste y cuál es el propósito de un ataque ARP de tipo “man-in-the-middle”? ¿Se puede implementar en una red Ethernet con hub? ¿Y en una red Ethernet con switch?
+
+Respuesta:
+
+Se basa en modificar las tablas ARP de las víctimas para asociar la MAC del atacante con la de de las víctimas (esto se hace mediante el paso de mensajes ARP Reply) y así interceptar todo el tráfico intercambiado por las dos máquinas.
+
+Gracias a esto el atacante podría cambiar el contenido y destino de los datos a su antojo. Se puede implementar en ambos casos, utilizando un red Ethernet con HUB e incluso con un SWITCH.
+
+6. ¿En qué se diferencian las técnicas de escaneo de puertos de tipo “Connect” y de tipo “SYN stealth”? ¿Qué ventaja tiene la segunda técnica con respecto a la primera?
+
+Respuesta:
+
+En el escaneo de puertos Connect se establece una conexión TCP con la máquina objetivo y una vez establecida se cierra la conexión, a diferencia de esto en la técnica SYN stealth envía un fragmento SYN=1 pero sin llegar a establecer la conexión TCP como tal, ya que se aborta (RST) antes de completarse.
+
+La principal ventaja de la segunda técnica respecto a la primera es que la conexión no llega a establecerse por lo que no deja rastro en la máquina objetivo.
+
+7. Supongamos una máquina Linux que actúa como firewall entre la red interna de una organización e Internet. El firewall está conectado a la red interna por la interfaz eth1 y a Internet por la interfaz eth2. Suponemos que todas las máquina de la organización (incluido el firewall) tienen instalado el servicio ssh. El administrador ejecuta en el firewall los siguientes comandos de iptables:
+
+(1) # iptables -P INPUT DROP
+(2) # iptables -P FORWARD DROP
+(3) # iptables -P OUTPUT DROP
+(4) # iptables -A FORWARD -m state --state ESTABLISHED, RELATED -j ACCEPT
+(5) # iptables -A FORWARD -i eth1 -p tcp --dport http -m state --state NEW -j ACCEPT
+(6) # iptables -A FORWARD -i eth2 -p tcp --dport ssh -m state --state NEW -j ACCEPT
+(7) # iptables -A FORWARD -p icmp --icmp-type echo-request -j ACCEPT
+Indica, de forma razonada, si el firewall permitirá o rechazará las siguientes acciones:
+
+a) Una máquina de la red interna intenta conectarse a un servidor web de Internet
+b) Una máquina de la red interna intenta conectarse a un servidor ssh de Internet
+c) Una máquina de Internet intenta conectarse a un servidor web de la red interna
+d) Una máquina de Internet intenta conectarse a un servidor ssh de la red interna
+e) Una máquina de la red interna intenta conectarse al servidor ssh del firewall
+f) Una máquina de la red interna envía un ICMP echo request a una máquina de Internet
+g) Una máquina de Internet devuelve un ICMP echo reply a una máquina de la red interna como respuesta a un echo request previo
+
+Respuesta:
+
+
+En las conexiones ssh y http que se permitan el mensaje new se podrán intercambiar los paquetes por completo gracias a la regla 4 que acepta los paquete de conexiones establecidas o paquetes relacionados.
+
+
+
+a) Se acepta, gracias a la regla 5 que lo permite.
+
+
+
+b) Lo rechaza, ya que la regla 6 lo permitiría en el caso de que entrara la solicitud de ssh por internet (eth2). 
+
+
+
+c) Lo rechaza, debido a las políticas por defecto de rechazo.
+
+
+
+d) Se acepta, gracias a la regla 6 citada anteriormente que permite solicitudes por eth2.
+
+
+
+e) Lo rechaza, ya que la política por defecto es de rechazo.
+
+
+
+f) Se acepta, gracias a la regla 7.
+
+
+
+g) Se acepta, tal y como he añadido al principio gracias a la regla 4.
+
+8. Describe detalladamente el significado de la siguiente regla de Snort:
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"FTP Smiley Face Backdoor"; 
+content:"USER"; content:"sonrisa"; depth: 40; nocase; sid:10000002; rev:1;)
+
+Respuesta:
+
+Alerta al sistema de paquetes TCP que se manden con cualquier IP externa al sistema con un puerto cualquiera y destino una IP de la red interna al puerto 21. 
+
+Se notificará mediante el mensaje "FTP Smiley Face Backdoor" y para que se active deberá contener la cadena "USER" y ":)".  
+
+La profundidad 40 indica que solo se buscará el patrón en los primeros 40 caracteres. 
+
+El parámetro nocase para ignorar las mayúsculas. 
+
+Se utiliza sid para identificar la regla snort con el número 10000002.
+
+Y finalmente utiliza rev para identificar y reutilizar las reglas de Snort, este parametro siempre deber ir acompañado del sid.
+
+9. Supongamos una topología de red como la que muestra a continuación:
+
+          red1                red2               red3
+       1.1.1.0/24          2.2.2.0/24          3.3.3.0/24
+ host1 ----------- router1 ----------- router2 ----------- host2
+ eth1           eth1     eth2       eth1     eth2          eth1 
+1.1.1.10      1.1.1.1   2.2.2.1   2.2.2.2   3.3.3.2      3.3.3.10
+Al hacer un ping desde host1 a host2, observamos el siguiente paquete IPsec en la red2:
+
+   ------------------------------------------------------
+  |   Cabecera IP     |  Cabecera |    Datos     |       |
+  | (Src.IP: 2.2.2.1) |    ESP    |   cifrados   |  ICV  | 
+  | (Dst.IP: 2.2.2.2) |           |              |       |
+   ------------------------------------------------------
+Responde de forma razonada a las siguientes cuestiones:
+
+a)    ¿Cuál es el modo en el que está funcionando el protocolo ESP de IPsec, modo transporte o modo túnel?
+b)   Para esta comunicación, ¿qué máquinas de la red están implementando IPsec, los hosts finales (host1 y host2) o los routers (router1 y router2)?
+
+
+
+Respuesta:
+
+a) Utiliza el modo túnel ya que se encripta el paquete al completo y se cambian las direcciones IP de origen y destino, y se le añaden las distintas cabeceras a los datos cifrados.
+
+
+
+b) Los routers son los encargados de implementar la VPN los host solo se encargan de recibir y enviar los paquete de forma normal. Los routes se encargan de las traducciones y encapsulado de los paquetes.
+
+10.
+
+Supongamos que nos conectamos a un servidor web mediante HTTPS y capturamos los dos siguientes mensajes del handshake protocol de SSL/TLS : 
+
+
+Respuesta:
+
+a) TLS 1.1
+
+
+
+b) Soporta 9 cipher suites
+
+
+
+c) Soporta AES_128_CBC, AES_256_CBC, RC4_128_CBC y 3DES_EDE_CBC
+
+
+
+d) Solo soporta el SHA
+
+
+
+e) Soporta ECDHE y DHE
+
+
+
+f) ECDSA, RSA y DSS
+
+
+
+g) TLS 1.0
+
+
+
+h) TLS 1.0 que es la máxima común // mi única respuesta mal :)
+
+
