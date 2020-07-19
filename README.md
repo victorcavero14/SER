@@ -9,3 +9,5 @@ La distribución del repositorio es sencilla, en ella se incluye una carpeta por
 ## Autor
 
 * Victor Manuel Cavero Gracia &nbsp; [![GitHub followers](https://img.shields.io/github/followers/victorcavero14?label=%40victorcavero14&style=social)](https://github.com/victorcavero14)
+
+* Jose Miguel Cabrera Llamas [![GitHub followers](https://img.shields.io/github/followers/JoseMiguelC?label=%40JoseMiguelC&style=social)](https://github.com/JoseMiguelC)
